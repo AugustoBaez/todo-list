@@ -6,7 +6,7 @@ import List from './components/List';
 function App() {
   const [todos, setTodos] = useState([
     {
-      content: "",
+      content: "hola",
       completed: false
     }
   ])

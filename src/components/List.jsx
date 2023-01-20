@@ -1,23 +1,23 @@
 import React from "react";
 
-const List = (props) => {
+const List = ({todos}) => {
 
-    const {todos} = props
     // const deleteTask = (props) => {
     //     props.filter((_, index) => index !== props)
-        
+
     // }
 
     return (
-        <>
-            {todos.map((task, index) => 
+        <div>
+
+            {todos.map((task) =>
                 <>
-                    <p key={index}>{task.content}</p>
-                    {/* <input type="checkbox"/>
-                    <button>Delete</button> */}
+                    <p>{task.content}</p>
+                    <input type="checkbox"/>
+                    <button>Delete</button>
                 </>
             )}
-        </>
+        </div>
     )
 
 }
