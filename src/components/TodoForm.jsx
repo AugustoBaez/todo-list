@@ -22,7 +22,6 @@ const Todo = ({todos, setTodos}) => {
         
         setTodos([...todos, newTask])
 
-        // setContent("")
     }
 
     return (

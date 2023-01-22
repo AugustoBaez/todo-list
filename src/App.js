@@ -15,7 +15,7 @@ function App() {
   return (
     <div className="App">
       <TodoForm todos={todos} setTodos={setTodos} />
-      <List todos={todos} />
+      <List todos={todos} setTodos={setTodos} />
     </div>
   );
 }
