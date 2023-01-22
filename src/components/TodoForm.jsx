@@ -4,24 +4,11 @@ const Todo = ({todos, setTodos}) => {
 
     const [content, setContent] = useState("")
     const [completed, setCompleted] = useState(false)
-
-    // const tasks = [
-    //     "Get python black belt",
-    //     "holaholahola",
-    //     "hacer tarea de bootcamp",
-    //     "estudiar",
-    //     "hacer comida"
-    // ]
+    const [id, setId] = useState()
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        const newTask = {
-            content,
-            completed
-        }
-        
-        setTodos([...todos, newTask])
-
+        setTodos([...todos, {content: content, completed: false, id: Math.random() * 100}])
     }
 
     return (

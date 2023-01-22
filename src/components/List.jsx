@@ -1,25 +1,28 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 
 const List = ({ todos, setTodos }) => {
 
-    const [tarea, setTarea] = useState("")
-    const [completado, setCompletado] = useState(false)
-
-    console.log(todos[0].completed)
-    const deleteTask = (tarea) => {
-        setTodos(todos.filter(el => el.content !== tarea.content))
+    const deleteTask = (task) => {
+        setTodos(todos.filter(el => el.id !== task.id))
     }
 
-
-    // const completado = (task) => {
-    //     return !task
-    // }
+    const completadoHandler = (task) => {
+        setTodos(todos.map(item => {
+            if (item.id == task.id) {
+                console.log(todos.completed)
+                return {
+                    ...item, completed: !item.completed
+                }
+            }
+            return item
+        }))
+    }
     return (
         <>
-            {todos.map((task) => 
+            {todos.map((task) =>
                 <div className="task">
-                    <p>{task.content}</p>
-                    <input type="checkbox" />
+                    <p key={task.id} className={`checkItem ${task.completed ? "completado" : ""}`}>{task.content}</p>
+                    <input type="checkbox" onClick={() => completadoHandler(task)} />
                     <button onClick={() => deleteTask(task)}>Delete</button>
                 </div>
             )}
