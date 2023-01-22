@@ -2,11 +2,36 @@
   text-align: center;
 }
 
+.task, .text {
+  display: flex;
+}
 .task {
   justify-content: center;
-  display: flex;
+  align-items: center;
+}
+
+.text{
+  margin-right: 20px;
+  align-items: center;
+}
+
+.addBtn {
+  background-color: blue;
+  border-style: none;
 }
 
 .completado {
-  background-color: green;
+  text-decoration-line: line-through;
+}
+
+button {
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+  width: 100px;
+  height: 30px
+}
+
+input {
+  height: 22px;
 }

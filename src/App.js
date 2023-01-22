@@ -4,15 +4,7 @@ import React, { useState } from 'react';
 import List from './components/List';
 
 function App() {
-  // const [todos, setTodos] = useState([
-  //   {
-  //     content: "",
-  //     completed: false,
-  //     id: Math.random() * 100
-  //   }
-  // ])
   const [todos, setTodos] = useState([])
-
 
   return (
     <div className="App">
