@@ -49,7 +49,7 @@ button {
 }
 
 input {
-  height: 35px;
+  height: 40px;
   margin-right: 3;
   width: 65%;
 }
@@ -71,10 +71,10 @@ p {
 
 .totalList {
   background-color: #2b3327;
-  width: 500px;
+  width: 600px;
   padding: 15px;
   flex-direction: column;
-  min-height: 500px;
+  min-height: 600px;
 }
 
 .task {
