@@ -16,6 +16,9 @@ const List = ({ todos, setTodos }) => {
             return item
         }))
     }
+    const clearAll = () => {
+        setTodos([])
+    }
     return (
         <>
             {todos.map((task) =>
@@ -27,6 +30,9 @@ const List = ({ todos, setTodos }) => {
                     <button onClick={() => deleteTask(task)}>Delete</button>
                 </div>
             )}
+            {todos.length > 0 &&
+                <button onClick={clearAll}>clear all</button>
+            }
         </>
     )
 
