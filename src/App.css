@@ -1,23 +1,26 @@
 .App {
   text-align: center;
-}
+  height: 100%;
+ }
 
-.task, .text {
+.task,
+.text, .totalList, .App {
   display: flex;
 }
-.task {
+
+.task, .App {
   justify-content: center;
   align-items: center;
 }
 
-.text{
+.text {
   margin-right: 20px;
   align-items: center;
 }
 
 .addBtn {
-  background-color: blue;
   border-style: none;
+  height: auto;
 }
 
 .completado {
@@ -28,10 +31,40 @@ button {
   background-color: black;
   color: white;
   border-radius: 5px;
-  width: 100px;
+  width: 80px;
   height: 30px
 }
 
 input {
   height: 22px;
+  margin-right: 3;
+  width: 60%;
+}
+
+form {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+p {
+  color: white;
+}
+
+.totalList, input {
+  border-radius: 10px;
+}
+
+
+.totalList {
+  background-color: darkslategrey;
+  width: 500px;
+  padding: 15px;
+  flex-direction: column;
+  min-height: 500px;
+}
+
+.task {
+  background-color: grey;
+  margin: 3px
 }

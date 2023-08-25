@@ -8,8 +8,10 @@ function App() {
 
   return (
     <div className="App">
-      <TodoForm todos={todos} setTodos={setTodos} />
-      <List todos={todos} setTodos={setTodos} />
+      <div className='totalList'>
+        <TodoForm todos={todos} setTodos={setTodos} />
+        <List todos={todos} setTodos={setTodos} />
+      </div>
     </div>
   );
 }
